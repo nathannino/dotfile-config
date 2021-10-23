@@ -6,7 +6,10 @@ Source : https://dev.to/nimai/yet-another-guide-on-backing-up-dotfiles-3be6
 But, if that link is down...
 
 ## Preparing system
-**This repo has a .bashrc included!**
+**This repo will have conflicts with any setup**
+Simply remove/backup any duplicate dotfile from your system.
+
+Example (using .bashrc)
 ```
 rm .bashrc
 ```
