@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+    <head>
+	<title>snownews subscriptions</title>
+    </head>
+    <body>
+	<outline text="(New headlines)" xmlUrl="smartfeed:/newitems"/>
+	<outline text="Arch Linux: Recent news updates" xmlUrl="https://archlinux.org/feeds/news/"/>
+	<outline text="Have I Been Pwned latest breaches" xmlUrl="http://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches?format=xml"/>
+	<outline text="Latest Linux Kernel Versions" xmlUrl="https://www.kernel.org/feeds/kdist.xml"/>
+    </body>
+</opml>
