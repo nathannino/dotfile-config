@@ -24,6 +24,10 @@ dotcfg remote add origin https://github.com/nimaipatel/dotfiles.git
 dotcfg pull origin master
 ```
 
+**Note : Some files have hardcoded stuff that could be different on other systems.**
+- .xmonad/xmobarrc		--> Updates are set to run /home/nathan_nino/.xmonad/get_yay_update.sh
+  - How to fix : Change "nathan_nino" to be the name of your user profile
+
 # How to add a dotfile
 This is a git repo, and dotcfg is just a git alias with some default flags
 ```

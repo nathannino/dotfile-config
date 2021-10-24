@@ -1,0 +1,31 @@
+Config { overrideRedirect  = False
+	, font			= "xft:iosevka-10"
+	, additionalFonts	= [ "xft:FontAwesome:size=10" ]
+	, bgColor		= "#424242" 
+	, fgColor		= "#d1feff"
+	, position = BottomW L 90
+	, commands = [ Run Uptime
+			[ "-t"
+			, "Uptime: <days>d <hours>h <minutes>m"
+			] 10
+		      , Run Cpu
+			[ "-L", "3"
+			, "-H", "50"
+			, "--high"   , "red"
+			, "--normal" , "green"
+			] 10
+		      , Run Memory ["--template", "Mem: <usedratio>%"] 10
+		      , Run Date "%a %Y-%m-%d | <fc=#8be9fd>%H:%M</fc>" "date" 10
+		      , Run BatteryP ["BAT1"]
+		      		[ "-t", "<acstatus>"
+				, "-L", "10", "-H", "80"
+				, "-l", "red", "-h", "green"
+				, "--", "-O", "Charging: <left>%", "-o", "Battery: <left>%"
+				] 10
+		      , Run Com "/home/nathan_nino/.xmonad/get_yay_update.sh" [] "myupdate" 3000 
+		      , Run XMonadLog
+		      ]
+	, sepChar	= "%"
+	, alignSep	= "}{"
+	, template = "%XMonadLog% } %date% { %uptime% | Updates: %myupdate% | %cpu% | %memory% | %battery% "
+	}
