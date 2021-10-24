@@ -8,6 +8,4 @@ alias shut='shutdown now'
 
 export EDITOR='nvim'
 
-clear
-date
-neofetch
+~/bash_unique_profile.sh
