@@ -37,5 +37,5 @@ if [ "$TERM" = "linux-16color" ]; then
 fi
 neofetch
 
-PS1='\[\e[1;36m\]\u\[\e[1;33m\]@\[\e[0;31m\]\h\[\e[m\] [\[\e[1;34m\]\w\[\e[m\]] \$ '
+PS1='\[\e[1;36m\]\u\[\e[1;33m\]@\[\e[1;31m\]\h\[\e[m\] [\[\e[1;36m\]\w\[\e[m\]] \$ '
 export EDITOR=nvim
