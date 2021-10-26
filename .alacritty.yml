@@ -177,28 +177,93 @@
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (One Dark - https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
+# Colors Themes (One Dark - https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
+#colors:
+#  primary:
+#    background: '#282c34'
+#    foreground: '#abb2bf'
+#  cursor:
+#    text:       CellBackground
+#    cursor:     '#528bff' # syntax-cursor-color
+#  selection:
+#    text:       CellForeground
+#    background: '#3e4451' # syntax-selection-color
+#  normal:
+#    black:      '#5c6370' # mono-3
+#    red:        '#e06c75' # red 1
+#    green:      '#98c379'
+#    yellow:     '#e5c07b' # orange 2
+#    blue:       '#61afef'
+#    magenta:    '#c678dd'
+#    cyan:       '#56b6c2'
+#    white:      '#828997' # mono-2
+
+# (Campbell - https://github.com/eendroroy/alacritty-theme/blob/master/themes/campbell.yaml)
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x0c0c0c'
+#    foreground: '0xcccccc'
+#
+#  # Normal colors
+#  normal:
+#    black:      '0x0c0c0c'
+#    red:        '0xc50f1f'
+#    green:      '0x13a10e'
+#    yellow:     '0xc19c00'
+#    blue:       '0x0037da'
+#    magenta:    '0x881798'
+#    cyan:       '0x3a96dd'
+#    white:      '0xcccccc'
+#
+#  # Bright colors
+#  bright:
+#    black:      '0x767676'
+#    red:        '0xe74856'
+#    green:      '0x16c60c'
+#    yellow:     '0xf9f1a5'
+#    blue:       '0x3b78ff'
+#    magenta:    '0xb4009e'
+#    cyan:       '0x61d6d6'
+#    white:      '0xf2f2f2'
+
+# Current Color Theme
 colors:
+  # Default colors
   primary:
     background: '#282c34'
     foreground: '#abb2bf'
   cursor:
     text:       CellBackground
-    cursor:     '#ffffff' #528bff # syntax-cursor-color
+    cursor:     '#ffffff' # syntax-cursor-color
   selection:
     text:       CellForeground
-    background: '#ffffff' #3e4451 # syntax-selection-color
-  normal:
-    black:      '#5c6370' # mono-3
-    red:        '#e06c75' # red 1
-    green:      '#98c379'
-    yellow:     '#e5c07b' # orange 2
-    blue:       '#61afef'
-    magenta:    '#c678dd'
-    cyan:       '#56b6c2'
-    white:      '#828997' # mono-2
+    background: '#ffffff' # syntax-selection-color
 
-# Bell
+  # Normal colors
+  normal:
+    black:      '0x0c0c0c'
+    red:        '0xc50f1f'
+    green:      '0x13a10e'
+    yellow:     '0xc19c00'
+    blue:       '0x0037da'
+    magenta:    '0x881798'
+    cyan:       '0x3a96dd'
+    white:      '0xcccccc'
+
+  # Bright colors
+  bright:
+    black:      '0x767676'
+    red:        '0xe74856'
+    green:      '0x16c60c'
+    yellow:     '0xf9f1a5'
+    blue:       '0x3b78ff'
+    magenta:    '0xb4009e'
+    cyan:       '0x61d6d6'
+    white:      '0xf2f2f2'
+
+
+      # Bell
 #
 # The bell is rung every time the BEL control character is received.
 #bell:
@@ -239,7 +304,7 @@ colors:
   #
   #command: None
 
-# Background opacity
+      # Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.

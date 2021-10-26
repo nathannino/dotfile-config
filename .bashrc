@@ -17,22 +17,22 @@ alias shut='shutdown now'
 dotcfg() { git --git-dir="$HOME/dotconfig/.git/" --work-tree="$HOME" "$@" ; } # Set up 
 
 if [ "$TERM" = "linux-16color" ]; then
-    echo -en "\e]P0222222" #black
-    echo -en "\e]P8222222" #darkgrey
-    echo -en "\e]P1803232" #darkred
-    echo -en "\e]P9982b2b" #red
-    echo -en "\e]P25b762f" #darkgreen
-    echo -en "\e]PA89b83f" #green
-    echo -en "\e]P3aa9943" #brown
-    echo -en "\e]PBefef60" #yellow
-    echo -en "\e]P4324c80" #darkblue
-    echo -en "\e]PC2b4f98" #blue
-    echo -en "\e]P5706c9a" #darkmagenta
-    echo -en "\e]PD826ab1" #magenta
-    echo -en "\e]P692b19e" #darkcyan
-    echo -en "\e]PEa1cdcd" #cyan
-    echo -en "\e]P7ffffff" #lightgrey
-    echo -en "\e]PFdedede" #white
+    echo -en "\e]P00c0c0c" #black
+    echo -en "\e]P8767676" #darkgrey
+    echo -en "\e]P1c50f1f" #darkred
+    echo -en "\e]P9e76856" #red
+    echo -en "\e]P213a10e" #darkgreen
+    echo -en "\e]PA16c60c" #green
+    echo -en "\e]P3c19c00" #brown
+    echo -en "\e]PBf9f1a5" #yellow
+    echo -en "\e]P40037da" #darkblue
+    echo -en "\e]PC3b78ff" #blue
+    echo -en "\e]P5881798" #darkmagenta
+    echo -en "\e]PDb4009e" #magenta
+    echo -en "\e]P63a96dd" #darkcyan
+    echo -en "\e]PE61d6d6" #cyan
+    echo -en "\e]P7cccccc" #lightgrey
+    echo -en "\e]PFf2f2f2" #white
     clear #for background artifacting
 fi
 neofetch
