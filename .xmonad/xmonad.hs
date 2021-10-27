@@ -41,7 +41,7 @@ myXmobarPP = def
 	, ppHiddenNoWindows	= lowWhite . wrap " " ""
 	, ppUrgent		= red . wrap (yellow "!") (yellow "!")
 	, ppOrder		= \[ws, l, _, wins] -> [ws, l, wins]
-	, ppExtras		= [logTitle]
+	, ppExtras		= [logTitles formatFocused formatUnfocused]
 	}
 	where
 		formatFocused	= wrap (white		"[") (white	"]") . magenta 	. ppWindow
@@ -73,6 +73,8 @@ myConfig = def
 	{ modMask	= mod1Mask	-- Change this to mod4 when switching to main pc
 	, terminal	= myTerminal	-- Set the terminal
 	, manageHook = myManageHook	-- Deal with windows (Make some floating)
+	, focusedBorderColor = "#969e00"
+	, normalBorderColor = "#000247"
 	}
 	`additionalKeysP` -- Add keybinds
 	[ ("M-S-m"		, promote)
