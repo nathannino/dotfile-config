@@ -13,6 +13,7 @@ export TERM=linux-16color
 alias ls='ls --color=auto'
 alias schedule-git='~/maintenance/schedule-git'
 alias shut='shutdown now'
+alias javac16='javac --release 16'
 
 dotcfg() { git --git-dir="$HOME/dotconfig/.git/" --work-tree="$HOME" "$@" ; } # Set up 
 
