@@ -8,7 +8,6 @@
 [[ $- != *i* ]] && return
 
 export TERMINFO="$HOME/.terminfo"
-export TERM=linux-16color
 
 alias ls='ls --color=auto'
 alias schedule-git='~/maintenance/schedule-git'
