@@ -22,7 +22,7 @@ Config { overrideRedirect  = False
 				, "-l", "red", "-h", "green"
 				, "--", "-O", " Charging: <left>%", "-o", " Battery: <left>%", "-i", ""
 				] 10
-		      , Run Com "/home/nathan_nino/.xmonad/get_yay_update.sh" [] "myupdate" 3000 
+		      , Run Com "/home/nathan_nino/.xmonad/get_yay_update.sh" [] "myupdate" 100 
 		      , Run XMonadLog
 		      ]
 	, sepChar	= "%"

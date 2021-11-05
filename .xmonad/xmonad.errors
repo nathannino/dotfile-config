@@ -1,0 +1,131 @@
+$ ghc --make xmonad.hs -i -ilib -fforce-recomp -main-is main -dynamic -v0 -outputdir /home/nathan_nino/.xmonad/build-x86_64-linux -o /home/nathan_nino/.xmonad/xmonad-x86_64-linux
+
+xmonad.hs:3:1: error:
+    Could not load module ‘XMonad.Util.EZConfig’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+  |
+3 | import XMonad.Util.EZConfig -- Kinda for stuff like keybindings... [View docs for cheatsheet]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:4:1: error:
+    Could not load module ‘XMonad.Util.Ungrab’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+  |
+4 | import XMonad.Util.Ungrab
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:5:1: error:
+    Could not load module ‘XMonad.Util.Loggers’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+  |
+5 | import XMonad.Util.Loggers
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:7:1: error:
+    Could not load module ‘XMonad.Config.Desktop’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+  |
+7 | import XMonad.Config.Desktop
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:9:1: error:
+    Could not load module ‘XMonad.Actions.Promote’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+  |
+9 | import XMonad.Actions.Promote
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:10:1: error:
+    Could not load module ‘XMonad.Util.Run’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+10 | import XMonad.Util.Run
+   | ^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:11:1: error:
+    Could not load module ‘XMonad.Util.SpawnOnce’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+11 | import XMonad.Util.SpawnOnce
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:13:1: error:
+    Could not load module ‘XMonad.Hooks.EwmhDesktops’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+13 | import XMonad.Hooks.EwmhDesktops
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:15:1: error:
+    Could not load module ‘XMonad.Util.Hacks’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+15 | import qualified XMonad.Util.Hacks as Hacks -- Random, hacky fixes for a few things, including java graphical apps not working
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:18:1: error:
+    Could not load module ‘XMonad.Hooks.DynamicLog’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+18 | import XMonad.Hooks.DynamicLog
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:19:1: error:
+    Could not load module ‘XMonad.Hooks.StatusBar’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+19 | import XMonad.Hooks.StatusBar
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:20:1: error:
+    Could not load module ‘XMonad.Hooks.StatusBar.PP’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+20 | import XMonad.Hooks.StatusBar.PP
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:21:1: error:
+    Could not load module ‘XMonad.Hooks.ManageHelpers’
+    It is a member of the package ‘xmonad-contrib-0.16.999-8YQ7SbDFBw33oOIvhZaIrw’
+    which is unusable due to missing dependencies:
+      random-1.2.1-GTaXQEmVKZP2pnqal7ZY4e
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+21 | import XMonad.Hooks.ManageHelpers
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
