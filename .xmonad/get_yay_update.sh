@@ -4,4 +4,4 @@
 pacman -Qu > /dev/null
 
 # Get the amount of package updates
-yay -Qu | grep -o "\->" | wc -l | xargs printf
+yay -Qsu | grep -o "\->" | wc -l | xargs printf
