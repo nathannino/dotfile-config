@@ -1,9 +1,10 @@
 Config { overrideRedirect  = False
 	, font			= "xft:iosevka-10"
-	, additionalFonts	= [ "xft:FontAwesome:size=10" ]
+	, additionalFonts	= [ "xft:FontAwesome:pixelsize=10" ]
 	, bgColor		= "#424242" 
 	, fgColor		= "#d1feff"
 	, position = TopW L 90
+	, allDesktops = True
 	, commands = [ Run Uptime
 			[ "-t"
 			, "Uptime: <days>d <hours>h <minutes>m"
@@ -15,7 +16,7 @@ Config { overrideRedirect  = False
 			, "--normal" , "green"
 			] 10
 		      , Run Memory ["--template", "Mem: <usedratio>%"] 10
-		      , Run Date "%a %Y-%m-%d | <fc=#8be9fd>%H:%M</fc>" "date" 10
+		      , Run Date "<fn=0>\xf133</fn>%a %Y-%m-%d | <fc=#8be9fd>%H:%M</fc>" "date" 10
 		      , Run BatteryP ["BAT1"]
 		      		[ "-t", "<acstatus>"
 				, "-L", "10", "-H", "80"
