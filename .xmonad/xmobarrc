@@ -1,32 +1,36 @@
 Config { overrideRedirect  = False
 	, font			= "xft:iosevka-10"
-	, additionalFonts	= [ "xft:FontAwesome:pixelsize=10" ]
+	, additionalFonts	= ["xft:Symbols Nerd Font-10"]
 	, bgColor		= "#424242" 
 	, fgColor		= "#d1feff"
 	, position = TopW L 90
 	, allDesktops = True
 	, commands = [ Run Uptime
 			[ "-t"
-			, "Uptime: <days>d <hours>h <minutes>m"
+			, "<fn=1></fn> <days>d <hours>h <minutes>m"
 			] 10
 		      , Run Cpu
 			[ "-L", "3"
 			, "-H", "50"
 			, "--high"   , "red"
 			, "--normal" , "green"
+			, "-t" , "<fn=1></fn>: <total>%"
 			] 10
-		      , Run Memory ["--template", "Mem: <usedratio>%"] 10
-		      , Run Date "<fn=0>\xf133</fn>%a %Y-%m-%d | <fc=#8be9fd>%H:%M</fc>" "date" 10
+		      , Run Memory ["--template", "<fn=1></fn>: <usedratio>%"] 10
+		      , Run Date "<fn=1></fn> %a %Y-%m-%d | <fc=#8be9fd>%H:%M <fn=1></fn></fc>" "date" 10
 		      , Run BatteryP ["BAT1"]
 		      		[ "-t", "<acstatus>"
 				, "-L", "10", "-H", "80"
 				, "-l", "red", "-h", "green"
-				, "--", "-O", " Charging: <left>%", "-o", " Battery: <left>%", "-i", ""
+				, "--"
+				, "--highs", " <fn=1></fn>: <left>%", "--mediums", " <fn=1></fn>: <left>%", "--lows", " <fn=1></fn>: <left>%"
+				, "-o", "", "-O", "", "-i", ""
 				] 10
 		      , Run Com "/home/nathan_nino/.xmonad/get_yay_update.sh" [] "myupdate" 100 
 		      , Run XMonadLog
 		      ]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "%XMonadLog% } %date% { %uptime% | Updates: %myupdate% | %cpu% | %memory% |%battery% "
+	, template = "%XMonadLog% } | %date% | { %uptime% | <fn=1></fn>: %myupdate% | %cpu% | %memory% |%battery% "
+
 	}
