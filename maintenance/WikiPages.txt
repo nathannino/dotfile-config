@@ -1,0 +1,8 @@
+Arch Linux Wiki Pages
+
+Installation Page : https://wiki.archlinux.org/title/Installation_guide
+
+General Recommendation : https://wiki.archlinux.org/title/General_recommendations
+
+SSD maintenance : https://wiki.archlinux.org/title/Solid_state_drive
+
