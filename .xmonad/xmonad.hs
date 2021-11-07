@@ -11,6 +11,7 @@ import XMonad.Config.Desktop
 import XMonad.Actions.Promote
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
+import XMonad.Prompt.DirExec
 
 import XMonad.Hooks.EwmhDesktops
 
@@ -60,6 +61,7 @@ myManageHook = composeAll
 	]
 
 myTerminal = "alacritty" --Since we are using the terminal in other places
+myHome = "/home/nathan_nino/"
 
 -- Set configuration
 myConfig = def
@@ -74,5 +76,6 @@ myConfig = def
 	, ("M-<Return>"		, spawn $ myTerminal) 
 	, ("M-S-<Return>"	, spawn "dmenu_run")
 	, ("M-S-z"		, spawn "firefox --new-window")
+	, ("M-\\"		, spawn $ myHome ++ "/maintenance/xmenu_run")
 	]
 	
