@@ -17,7 +17,7 @@ Config { overrideRedirect  = False
 			, "-t" , "<fn=1></fn>: <total>%"
 			] 10
 		      , Run Memory ["--template", "<fn=1></fn>: <usedratio>%"] 10
-		      , Run Date "%a %Y-%m-%d | <fc=#8be9fd>%H:%M <fn=1></fn></fc>" "date" 10
+		      , Run Date "<fn=1></fn> %a %Y-%m-%d | <fc=#8be9fd>%H:%M <fn=1></fn></fc>" "date" 10
 		      , Run BatteryP ["BAT1"]
 		      		[ "-t", "<acstatus>"
 				, "-L", "10", "-H", "80"
@@ -31,6 +31,6 @@ Config { overrideRedirect  = False
 		      ]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "%XMonadLog% } <fn=1></fn> %date% { %uptime% | <fn=1></fn>: %myupdate% | %cpu% | %memory% |%battery% "
+	, template = "%XMonadLog% } | %date% | { %uptime% | <fn=1></fn>: %myupdate% | %cpu% | %memory% |%battery% "
 
 	}
