@@ -1,0 +1,3 @@
+If you need to move this folder, please remember to change ~/.xbindkeysrc
+If you do not do that, the printscreen key will no longer take a screenshot
+
