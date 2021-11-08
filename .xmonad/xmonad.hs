@@ -78,5 +78,7 @@ myConfig = def
 	, ("M-S-<Return>"	, spawn "dmenu_run")
 	, ("M-S-z"		, spawn "firefox --new-window")
 	, ("M-\\"		, spawn $ myHome ++ "/maintenance/xmenu_run")
+	, ("M-S-s"		, spawn "flameshot gui")
+	, ("M-s"		, spawn $ myHome ++ "/maintenance/screenshot-script/fullscreenshot.sh")
 	]
 	
