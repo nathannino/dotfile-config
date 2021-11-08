@@ -1,9 +1,10 @@
 Config { overrideRedirect  = False
 	, font			= "xft:iosevka-10"
 	, additionalFonts	= ["xft:Symbols Nerd Font-10"]
-	, bgColor		= "#424242" 
+	, bgColor		= "#373737" --Remember to do a replace find, everywhere we have a specific background/foreground color haha =D 
 	, fgColor		= "#d1feff"
 	, position = TopW L 90
+	, textOffset		= 17
 	, allDesktops = True
 	, commands = [ Run Uptime
 			[ "-t"
@@ -31,6 +32,7 @@ Config { overrideRedirect  = False
 		      ]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "%XMonadLog% } | %date% | { %uptime% | <fn=1></fn>: %myupdate% | %cpu% | %memory% |%battery% "
+	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff>%XMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff> %uptime% | <fn=1></fn>: %myupdate% | %cpu% | %memory% |%battery% </box></fc>"
+
 
 	}

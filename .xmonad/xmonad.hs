@@ -35,23 +35,24 @@ main = xmonad
 -- Xmobar pretty printer
 myXmobarPP :: PP
 myXmobarPP = def
-	{ ppCurrent = yellow . wrap "[" "]" -- Current workspace in xmobar
-	, ppVisible = magenta -- Visible workspaces that are not the current workspace
-	, ppHidden = lightBlue -- Hidden workspaces
+	{ ppCurrent = yellow . wrap "<box type=Bottom width=3 color=#f9fb07> " " </box>" -- Current workspace in xmobar
+	, ppVisible = magenta . wrap "<box type=Bottom width=3 color=#ff79c6> " " </box>" -- Visible workspaces that are not the current workspace
+	, ppHidden = lightBlue . wrap " " " " -- Hidden workspaces
 	--, ppHiddenNoWindows = lowWhite -- Hidden workspaces, but no windows
 	, ppTitle = lightBlue . shorten 60 -- Title of window
+	, ppWsSep = ""
 	, ppSep = " | " -- Seperator
-	, ppUrgent = red . wrap "!" "!" -- Urgent window in workspace
+	, ppUrgent = red . wrap "<box type=Bottom width=3 color=#ff5555> " " </box>" -- Urgent window in workspace
 	}
 	where -- Color definitions
 		blue, lowWhite, magenta, red, white, yellow :: String -> String
-		magenta	 = xmobarColor "#ff79c6" ""
-		blue	 = xmobarColor "#bd93f9" ""
-		lightBlue= xmobarColor "#d1feff" ""
-		white	 = xmobarColor "#ffffff" ""
-		yellow	 = xmobarColor "#f9fb07" ""
-		red	 = xmobarColor "#ff5555" ""
-		lowWhite = xmobarColor "#bbbbbb" ""
+		magenta	 = xmobarColor "#ff79c6" "#303030:0"
+		blue	 = xmobarColor "#bd93f9" "#424242:0"
+		lightBlue= xmobarColor "#d1feff" "#424242:0"
+		white	 = xmobarColor "#ffffff" "#424242:0"
+		yellow	 = xmobarColor "#f9fb07" "#303030:0"
+		red	 = xmobarColor "#ff5555" "#424242:0"
+		lowWhite = xmobarColor "#bbbbbb" "#424242:0"
 
 -- Custom configuration stuff
 
