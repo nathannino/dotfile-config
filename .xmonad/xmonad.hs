@@ -75,7 +75,7 @@ myConfig = def
 	`additionalKeysP` -- Add keybinds
 	[ ("M-S-m"		, promote)
 	, ("M-<Return>"		, spawn $ myTerminal) 
-	, ("M-S-<Return>"	, spawn "dmenu_run")
+	, ("M-S-<Return>"	, spawn "dmenu_run -p Run: -h 23")
 	, ("M-S-z"		, spawn "firefox --new-window")
 	, ("M-\\"		, spawn $ myHome ++ "/maintenance/xmenu_run")
 	, ("M-S-s"		, spawn "flameshot gui")
