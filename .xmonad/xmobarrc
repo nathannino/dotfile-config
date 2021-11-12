@@ -3,7 +3,7 @@ Config { overrideRedirect  = False
 	, additionalFonts	= ["xft:Symbols Nerd Font-10"]
 	, bgColor		= "#373737" --Remember to do a replace find, everywhere we have a specific background/foreground color haha =D 
 	, fgColor		= "#d1feff"
-	, position = TopW L 90
+	, position = TopW L 100
 	, textOffset		= 17
 	, allDesktops = True
 	, commands = [ Run Uptime
@@ -27,12 +27,11 @@ Config { overrideRedirect  = False
 				, "--highs", " <fn=1></fn>: <left>%", "--mediums", " <fn=1></fn>: <left>%", "--lows", " <fn=1></fn>: <left>%"
 				, "-o", "", "-O", "", "-i", ""
 				] 10
-		      , Run Com "/home/nathan_nino/.xmonad/get_yay_update.sh" [] "myupdate" 100 
-		      , Run XMonadLog
+		      , Run UnsafeXMonadLog
 		      ]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff>%XMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff> %uptime% | <fn=1></fn>: %myupdate% | %cpu% | %memory% |%battery% </box></fc>"
+	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff>%UnsafeXMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff> %uptime% | %cpu% | %memory% |%battery% </box></fc>"
 
 
 	}

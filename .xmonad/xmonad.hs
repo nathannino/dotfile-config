@@ -3,6 +3,7 @@ import XMonad -- How to change config : https://xmonad.org/TUTORIAL.html
 import XMonad.Util.EZConfig -- Kinda for stuff like keybindings... [View docs for cheatsheet]
 import XMonad.Util.Ungrab
 import XMonad.Util.Loggers
+import XMonad.Util.ClickableWorkspaces
 
 import XMonad.Layout.ToggleLayouts
 
@@ -28,7 +29,7 @@ main :: IO ()
 main = xmonad 
         . ewmhFullscreen 
         . ewmh 
-        . withEasySB (statusBarProp "xmobar ~/.xmonad/xmobarrc" (pure myXmobarPP)) defToggleStrutsKey --  Keybindings at : https://xmonad.org/TUTORIAL.html#changing-what-xmonad-sends-to-xmobar
+        . withEasySB (statusBarProp "xmobar ~/.xmonad/xmobarrc" (clickablePP myXmobarPP)) defToggleStrutsKey --  Keybindings at : https://xmonad.org/TUTORIAL.html#changing-what-xmonad-sends-to-xmobar
         . Hacks.javaHack 
         $ myConfig -- See end of file
 
@@ -37,8 +38,8 @@ myXmobarPP :: PP
 myXmobarPP = def
 	{ ppCurrent = yellow . wrap "<box type=Bottom width=3 color=#f9fb07> " " </box>" -- Current workspace in xmobar
 	, ppVisible = magenta . wrap "<box type=Bottom width=3 color=#ff79c6> " " </box>" -- Visible workspaces that are not the current workspace
-	, ppHidden = lightBlue . wrap " " " " -- Hidden workspaces
-	--, ppHiddenNoWindows = lowWhite -- Hidden workspaces, but no windows
+	, ppHidden = lightBlu . wrap " " " " -- Hidden workspaces
+	, ppHiddenNoWindows = lightBlue . wrap " " " " -- Hidden workspaces, but no windows
 	, ppTitle = lightBlue . shorten 60 -- Title of window
 	, ppWsSep = ""
 	, ppSep = " | " -- Seperator
@@ -47,8 +48,9 @@ myXmobarPP = def
 	where -- Color definitions
 		blue, lowWhite, magenta, red, white, yellow :: String -> String
 		magenta	 = xmobarColor "#ff79c6" "#303030:0"
-		blue	 = xmobarColor "#bd93f9" "#424242:0"
+		blue	 = xmobarColor "#8fb0ff" "#424242:0"
 		lightBlue= xmobarColor "#d1feff" "#424242:0"
+		lightBlu = xmobarColor "#d1feff" "#303030:0"
 		white	 = xmobarColor "#ffffff" "#424242:0"
 		yellow	 = xmobarColor "#f9fb07" "#303030:0"
 		red	 = xmobarColor "#ff5555" "#424242:0"
