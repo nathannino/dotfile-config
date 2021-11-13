@@ -29,7 +29,8 @@ main :: IO ()
 main = xmonad 
         . ewmhFullscreen 
         . ewmh 
-        . withEasySB (statusBarProp "xmobar ~/.xmonad/xmobarrc" (clickablePP myXmobarPP)) defToggleStrutsKey --  Keybindings at : https://xmonad.org/TUTORIAL.html#changing-what-xmonad-sends-to-xmobar
+        . withEasySB (statusBarProp "xmobar ~/.xmonad/xmobarrc -x 0" (clickablePP myXmobarPP)) defToggleStrutsKey --  Keybindings at : https://xmonad.org/TUTORIAL.html#changing-what-xmonad-sends-to-xmobar
+        . withEasySB (statusBarProp "xmobar ~/.xmonad/xmobarrc -x 1" (clickablePP myXmobarPP)) defToggleStrutsKey --  Keybindings at : https://xmonad.org/TUTORIAL.html#changing-what-xmonad-sends-to-xmobar
         . Hacks.javaHack 
         $ myConfig -- See end of file
 
@@ -60,8 +61,14 @@ myXmobarPP = def
 
 myManageHook :: ManageHook --Deal with stuff like floating windows
 myManageHook = composeAll
-	[ isDialog		--> doFloat
+	[ isDialog					--> doFloat 
+	, className =? "steam_app_774181"		--> doFloat
+	, className =? "dokitakeover.exe"		--> doFloat
+	, title =? "UNDERTALE"				--> doFloat
 	]
+	where
+		myTitleFloats = ["UNDERTALE"]
+		myClassFloats = ["dokitakeover.exe" , "steam_app_774181"]
 
 myTerminal = "alacritty" --Since we are using the terminal in other places
 myHome = "/home/nathan_nino/"
