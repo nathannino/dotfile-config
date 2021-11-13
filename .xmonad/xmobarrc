@@ -1,10 +1,10 @@
 Config { overrideRedirect  = False
-	, font			= "xft:iosevka-10"
+	, font			= "xft:arimo-10"
 	, additionalFonts	= ["xft:Symbols Nerd Font-10"]
 	, bgColor		= "#373737" --Remember to do a replace find, everywhere we have a specific background/foreground color haha =D 
 	, fgColor		= "#d1feff"
 	, position = TopW L 100
-	, textOffset		= 17
+	--, textOffset		= 0
 	, allDesktops = True
 	, commands = [ Run Uptime
 			[ "-t"
