@@ -64,11 +64,9 @@ myManageHook = composeAll
 	[ isDialog					--> doFloat 
 	, className =? "steam_app_774181"		--> doFloat
 	, className =? "dokitakeover.exe"		--> doFloat
+	, className =? "DDLC"				--> doFloat
 	, title =? "UNDERTALE"				--> doFloat
 	]
-	where
-		myTitleFloats = ["UNDERTALE"]
-		myClassFloats = ["dokitakeover.exe" , "steam_app_774181"]
 
 myTerminal = "alacritty" --Since we are using the terminal in other places
 myHome = "/home/nathan_nino/"
