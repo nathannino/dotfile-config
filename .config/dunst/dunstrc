@@ -210,7 +210,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/xmenu
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/firefox
