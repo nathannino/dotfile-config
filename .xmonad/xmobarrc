@@ -1,10 +1,11 @@
 Config { overrideRedirect  = False
 	, font			= "xft:arimo-10"
-	, additionalFonts	= ["xft:Symbols Nerd Font-10"]
+	, additionalFonts	= ["xft:Symbols Nerd Font-10","xft:Symbols Nerd Font-10"]
 	, bgColor		= "#373737" --Remember to do a replace find, everywhere we have a specific background/foreground color haha =D 
 	, fgColor		= "#d1feff"
 	, position = TopW L 100
-	--, textOffset		= 0
+	--, textOffset		= 17
+	, textOffsets		= [17,19]
 	, allDesktops = True
 	, commands = [ Run Uptime
 			[ "-t"
@@ -24,14 +25,14 @@ Config { overrideRedirect  = False
 				, "-L", "10", "-H", "80"
 				, "-l", "red,#303030:0", "-h", "green,#303030:0"
 				, "--"
-				, "--highs", " <fn=1></fn>: <left>%", "--mediums", " <fn=1></fn>: <left>%", "--lows", " <fn=1></fn>: <left>%"
+				, "--highs", " <fn=1></fn>: <left>% | ", "--mediums", " <fn=1></fn>: <left>% | ", "--lows", " <fn=1></fn>: <left>% | "
 				, "-o", "", "-O", "", "-i", ""
 				] 10
 		      , Run UnsafeXMonadLog
 		      ]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff>%UnsafeXMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff> %uptime% | %cpu% | %memory% |%battery% </box></fc>"
+	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff><action=`~/maintenance/xmenu_run` button=1> <fn=1></fn> </action>%UnsafeXMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff> %uptime% | %cpu% | %memory% |%battery%<action=`dunstctl history-pop` button=1><action=`dunstctl close-all` button=3><fn=2></fn> </action></action></box></fc>"
 
 
 	}
