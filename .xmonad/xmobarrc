@@ -4,8 +4,6 @@ Config { overrideRedirect  = False
 	, bgColor		= "#373737" --Remember to do a replace find, everywhere we have a specific background/foreground color haha =D 
 	, fgColor		= "#d1feff"
 	, position = TopW L 100
-	--, textOffset		= 17
-	, textOffsets		= [17,19]
 	, allDesktops = True
 	, commands = [ Run Uptime
 			[ "-t"
