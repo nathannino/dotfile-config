@@ -5,12 +5,21 @@ Source : https://dev.to/nimai/yet-another-guide-on-backing-up-dotfiles-3be6
 
 But, if that link is down...
 
-## Dependencies
-Some files try to run programs... probably a good idea to have thoses (They are pretty much all inside .bashrc or .bash\_profile
-
-- `Any version of the jdk after jdk16` --> For the javac16 shortcut used in school
-- `neofetch` --> This is the cool litle thing that appears when opening the terminal
-- `x11-ssh-askpass` --> There in case a graphical program NEEDS to have elevated privileges.
+## Programs in this thing 
+- xmonad 		--> Currently `xmonad-git^aur`
+- xmonad-contrib	--> Currently `xmonad-contrib-git^aur`
+- xmobar
+- openjdk		--> At least version 16
+- neofetch
+- htop
+- dunst
+- dmenu
+- xmenu
+- flameshot
+- bash
+- calc			--> Need to symlink calc-d inside /usr/bin/
+- nvim
+- snownews
 
 ## Preparing system
 **This repo will have conflicts with any setup**
