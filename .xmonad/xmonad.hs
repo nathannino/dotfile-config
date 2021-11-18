@@ -41,7 +41,7 @@ myXmobarPP = def
 	, ppVisible = magenta . wrap "<box type=Bottom width=3 color=#ff79c6> " " </box>" -- Visible workspaces that are not the current workspace
 	, ppHidden = lightBlu . wrap " " " " -- Hidden workspaces
 	, ppHiddenNoWindows = lightBlue . wrap " " " " -- Hidden workspaces, but no windows
-	, ppTitle = lightBlue . shorten 60 -- Title of window
+	, ppTitle = lightBlue . shorten 100 -- Title of window
 	, ppWsSep = ""
 	, ppSep = " | " -- Seperator
 	, ppUrgent = red . wrap "<box type=Bottom width=3 color=#ff5555> " " </box>" -- Urgent window in workspace
