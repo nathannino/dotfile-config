@@ -20,6 +20,9 @@ But, if that link is down...
 - calc			--> Need to symlink calc-d inside /usr/bin/
 - nvim
 - snownews
+- mpd
+- ymuse
+- mpc
 
 ## Preparing system
 **This repo will have conflicts with any setup**
