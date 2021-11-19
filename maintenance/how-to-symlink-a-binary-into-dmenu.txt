@@ -4,7 +4,7 @@ Symlinking allows to have a file or folder LINK to another file or folder
 (Basically, they are shortcuts)
 Symlinks are great when you want to add something to dmenu without moving it to the binary folder
 
-To add a symlink :
+To add a symlink : <the `path of thing to be linked` needs to be an absolute path>
  > ln -s <path of thing to be linked> <path of link to be created>
    > Don't forget to sudo if you need root permission for <path of link to be created>
 
@@ -18,7 +18,7 @@ To delete a symlink
 dmenu will automagically add binaries found in /usr/bin/
 As such, to add a program to dmenu, you can
  > Example (Using DDLC-Take-Two) :
-   > sudo ln -s '/second-drive/Games/DDLCs/DDLC Take 2/DDLC.sh' /usr/bin/DDLC-Take-Two
+   > sudo ln -s '/home/nathan_nino/second-drive/Games/DDLCs/DDLC Take 2/DDLC.sh' /usr/bin/DDLC-Take-Two
 The next time you open dmenu (win + shift + enter), it will get added to the list of executables
 
 ** IMPORTANT : Remember to add the right permissions to the ORIGINAL file. To run the file, a user will need EXECUTE permissions

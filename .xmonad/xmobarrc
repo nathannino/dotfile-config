@@ -5,8 +5,8 @@ Config { overrideRedirect  = False
 	, fgColor		= "#d1feff"
 	, position = TopW L 100
 	, allDesktops = True
-	, textOffset = 14
-	, textOffsets = [14,15]
+	, textOffset = 13
+	, textOffsets = [13,14]
 	, commands = [ Run Uptime
 			[ "-t"
 			, "<fn=1></fn> : <days>d <hours>h <minutes>m"
@@ -32,7 +32,7 @@ Config { overrideRedirect  = False
 		      ]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff><action=`~/maintenance/xmenu_run` button=1> <fn=1></fn> </action>%UnsafeXMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff> %uptime% | %cpu% | %memory% |%battery%<action=`dunstctl history-pop` button=1><action=`dunstctl close-all` button=3> <fn=2></fn> </action></action></box></fc>"
+	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff><action=`~/maintenance/xmenu_run` button=1> <fn=1></fn> </action>%UnsafeXMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff><action=`notify-send music 'This will open a simple xmenu thing'` button=1> <fn=1></fn> </action>| %uptime% | %cpu% | %memory% |%battery%<action=`dunstctl history-pop` button=1><action=`dunstctl close-all` button=3> <fn=2></fn> </action></action></box></fc>"
 
 
 	}
