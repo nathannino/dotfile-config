@@ -29,7 +29,7 @@ Config { overrideRedirect  = False
 				, "-o", "", "-O", "", "-i", ""
 				] 10
 		      --, Run CommandReader "/home/nathan_nino/.xmonad/bash-stuff/music_player_status.sh" musicplayer
-		      , Run Com "/home/nathan_nino/.xmonad/bash-stuff/music_player_status.sh" [""] "mymusicplayer" 10
+		      , Run Com "/home/nathan_nino/.xmonad/bash-stuff/music_player_status.sh" [""] "mymusicplayer" 1
 		      , Run UnsafeXMonadLog
 		      ]
 	, sepChar	= "%"

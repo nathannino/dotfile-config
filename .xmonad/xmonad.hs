@@ -41,7 +41,7 @@ myXmobarPP = def
 	, ppVisible = magenta . wrap "<box type=Bottom width=3 color=#ff79c6> " " </box>" -- Visible workspaces that are not the current workspace
 	, ppHidden = lightBlu . wrap " " " " -- Hidden workspaces
 	, ppHiddenNoWindows = lightBlue . wrap " " " " -- Hidden workspaces, but no windows
-	, ppTitle = lightBlue . shorten 95 -- Title of window
+	, ppTitle = lightBlue . shorten 90 -- Title of window
 	, ppWsSep = ""
 	, ppSep = " | " -- Seperator
 	, ppUrgent = red . wrap "<box type=Bottom width=3 color=#ff5555> " " </box>" -- Urgent window in workspace
@@ -84,8 +84,9 @@ myConfig = def
 	, ("M-<Return>"		, spawn $ myTerminal) 
 	, ("M-S-<Return>"	, spawn "dmenu_run -p Run: -h 23")
 	, ("M-S-z"		, spawn "firefox --new-window")
-	, ("M-\\"		, spawn $ myHome ++ "/maintenance/xmenu_run")
+	, ("M-\\"		, spawn $ myHome ++ "/maintenance/xmenu_run -p 0x20:cursor")
 	, ("M-S-s"		, spawn "flameshot gui")
 	, ("M-s"		, spawn $ myHome ++ "/maintenance/screenshot-script/fullscreenshot.sh")
+	, ("M-S-p"		, spawn $ myHome ++ "/.xmonad/bash-stuff/music-helper/xmenu-run.sh -p 850x20:0")
 	]
 	
