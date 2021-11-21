@@ -71,9 +71,10 @@ else
 	while IFS= read -r line; do
 	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST$line"$'\n'
 	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Add to session"$'\t'"mpc load $line && mpc play"$'\n'
-	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Clear and play"$'\t'"mpc clear && mpc load $line && mpc play"$'\n'
+	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Replace session"$'\t'"mpc clear && mpc load $line && mpc play"$'\n'
 	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t\n'
 	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Delete playlist"$'\t'"mpc rm $line"$'\n'
+	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Replace contents with session"$'\t'"mpc rm $line && mpc save $line"$'\n'
 	    let VAR_LINENUMBER+=1
 	done <<< "$VAR_PLAYLIST_LIST_STEPONE"
 fi
@@ -86,13 +87,13 @@ $VAR_PLAYLIST_SONGS
 Controls
 	Play/Pause				mpc toggle
 	Seek					dmenu -p 'Seek [+-](HH:MM:SS or 0-100%) : ' | xargs mpc seek
-	Volume ($VAR_VOLUME)			dmenu -p 'Volume % (Current = $VAR_VOLUME) : ' | xargs mpc volume
 Player Settings
 	Repeat ($VAR_REPEAT)			second-drive/Dreamlandmpc repeat
 	Random ($VAR_RANDOM)			mpc random
 	Single ($VAR_SINGLE)			mpc single
 	Consume ($VAR_CONSUME)			mpc consume
 	Crossfade (${VAR_CROSSFADE}s)		dmenu -p 'Crossfade (seconds) (Current = $VAR_CROSSFADE) : ' | xargs mpc crossfade
+	Volume ($VAR_VOLUME)			dmenu -p 'Volume % (Current = $VAR_VOLUME) : ' | xargs mpc volume
 Session Controls
 	Add song				"$VAR_WORKING_DIRECTORY"/add-song-and-play.sh
 	Clear					mpc clear
@@ -103,7 +104,7 @@ Playlists
 	
 	All Songs
 		Add to session			mpc add / && mpc play
-		Clear and play			mpc clear && mpc add / && mpc play
+		Replace session			mpc clear && mpc add / && mpc play
 	
 $VAR_PLAYLIST_LIST
 Open ymuse					ymuse
