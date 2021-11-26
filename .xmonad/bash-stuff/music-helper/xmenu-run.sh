@@ -47,12 +47,10 @@ VAR_PLAYLIST_SONGS_STEPONE=$(mpc playlist)
 if test -z "$VAR_PLAYLIST_SONGS_STEPONE"
 then
 	VAR_PLAYLIST_SONGS=$'\tNo songs in queue =/\n'
-else
-	VAR_PLAYLIST_SONGS_STEPONE=$(printf "$VAR_PLAYLIST_SONGS_STEPONE" | sed 's/^/\t/')
-		
+else	
 	VAR_LINENUMBER=1
 	while IFS= read -r line; do
-	    VAR_PLAYLIST_SONGS="$VAR_PLAYLIST_SONGS$line"$'\n'
+	    VAR_PLAYLIST_SONGS="$VAR_PLAYLIST_SONGS"$'\t'"$line"$'\n'
 	    VAR_PLAYLIST_SONGS="$VAR_PLAYLIST_SONGS"$'\t\t'"Jump to song"$'\t'"mpc play $VAR_LINENUMBER"$'\n'
 	    VAR_PLAYLIST_SONGS="$VAR_PLAYLIST_SONGS"$'\t\t'"Remove from session"$'\t'"mpc del $VAR_LINENUMBER"$'\n'
 	    let VAR_LINENUMBER+=1
@@ -65,16 +63,14 @@ if test -z "$VAR_PLAYLIST_LIST_STEPONE"
 then ## No playlists exists
 	VAR_PLAYLIST_LIST=$'\tNo playlists =/\n'
 else
-	VAR_PLAYLIST_LIST_STEPONE=$(printf "$VAR_PLAYLIST_LIST_STEPONE" | sed 's/^/\t/')
-
 	VAR_LINENUMBER=1
 	while IFS= read -r line; do
-	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST$line"$'\n'
-	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Add to session"$'\t'"mpc load $line && mpc play"$'\n'
-	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Replace session"$'\t'"mpc clear && mpc load $line && mpc play"$'\n'
+	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t'"$line"$'\n'
+	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Add to session"$'\t'"mpc load \"$line\" && mpc play"$'\n'
+	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Replace session"$'\t'"mpc clear && mpc load \"$line\" && mpc play"$'\n'
 	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t\n'
-	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Delete playlist"$'\t'"mpc rm $line"$'\n'
-	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Replace contents with session"$'\t'"mpc rm $line && mpc save $line"$'\n'
+	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Delete playlist"$'\t'"mpc rm \"$line\""$'\n'
+	    VAR_PLAYLIST_LIST="$VAR_PLAYLIST_LIST"$'\t\t'"Replace contents with session"$'\t'"mpc rm \"$line\" && mpc save $line"$'\n'
 	    let VAR_LINENUMBER+=1
 	done <<< "$VAR_PLAYLIST_LIST_STEPONE"
 fi
@@ -88,7 +84,7 @@ Controls
 	Play/Pause				mpc toggle
 	Seek					dmenu -p 'Seek [+-](HH:MM:SS or 0-100%) : ' | xargs mpc seek
 Player Settings
-	Repeat ($VAR_REPEAT)			second-drive/Dreamlandmpc repeat
+	Repeat ($VAR_REPEAT)			mpc repeat
 	Random ($VAR_RANDOM)			mpc random
 	Single ($VAR_SINGLE)			mpc single
 	Consume ($VAR_CONSUME)			mpc consume
@@ -100,7 +96,7 @@ Session Controls
 	Crop					mpc crop
 	Shuffle					mpc shuffle
 Playlists
-	Save Current Session as playlist	dmenu -p 'Name of playlist : ' | xargs mpc save	
+	Save Current Session as playlist	dmenu -p 'Name of playlist : ' | xargs -d '\n' mpc save	
 	
 	All Songs
 		Add to session			mpc add / && mpc play
