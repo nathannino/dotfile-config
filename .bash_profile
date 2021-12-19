@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 
 export TERM='linux-16color'
 
+
 if [ "$TERM" = "linux-16color" ]; then
     echo -en "\e]P00c0c0c" #black
     echo -en "\e]P8767676" #darkgrey
