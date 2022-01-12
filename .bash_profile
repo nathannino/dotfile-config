@@ -6,6 +6,7 @@
 
 alias shut='shutdown now'
 alias ls='ls --color=auto'
+alias snownews='snownews -u'
 
 export TERM='linux-16color'
 

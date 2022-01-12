@@ -8,5 +8,6 @@
 	<outline text="Arch Linux: Recent news updates" xmlUrl="https://archlinux.org/feeds/news/"/>
 	<outline text="Have I Been Pwned latest breaches" xmlUrl="http://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches?format=xml"/>
 	<outline text="Latest Linux Kernel Versions" xmlUrl="https://www.kernel.org/feeds/kdist.xml"/>
+	<outline text="Arch Linux: Recent news updates" xmlUrl="https://archlinux.org/feeds/news/"/>
     </body>
 </opml>
