@@ -29,7 +29,7 @@ Config { overrideRedirect  = False
 				, "-o", "", "-O", "", "-i", ""
 				] 10
 			--, Run Network "enp0s31f6" [] 100
-			, Run DynNetwork [ "-S", "True", "--template", "<fn=1>直</fn>: <fn=1></fn> <rx> \\ <tx> <fn=1></fn>" ] 30
+			, Run DynNetwork [ "-S", "True", "--template", "<fn=1>直</fn>: <fn=1></fn> <rx>  <tx> <fn=1></fn>" ] 30
 		  --, Run CommandReader "/home/nathan_nino/.xmonad/bash-stuff/music_player_status.sh" musicplayer
 		  , Run Com "/home/nathan_nino/.xmonad/bash-stuff/music_player_status.sh" [""] "mymusicplayer" 1
 		  , Run UnsafeXMonadLog
