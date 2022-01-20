@@ -7,7 +7,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export TERMINFO="$HOME/.terminfo"
+#export TERMINFO="$HOME/.terminfo"
 
 alias ls='ls --color=auto'
 alias schedule-git='~/maintenance/schedule-git'
