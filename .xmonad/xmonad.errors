@@ -1,7 +1,7 @@
 $ ghc --make xmonad.hs -i -ilib -fforce-recomp -main-is main -dynamic -v0 -outputdir /home/nathan_nino/.xmonad/build-x86_64-linux -o /home/nathan_nino/.xmonad/xmonad-x86_64-linux
 
 xmonad.hs:40:1: warning: [-Wtabs]
-    Tab character found here, and in 100 further locations.
+    Tab character found here, and in 103 further locations.
     Please use spaces instead.
    |
 40 |         { ppCurrent = yellow . wrap "<box type=Bottom width=3 color=#f9fb07> " " </box>" -- Current workspace in xmobar

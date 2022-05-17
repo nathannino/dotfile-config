@@ -23,8 +23,9 @@ else ## Yes mpd, print that
 			PLAYER_STATUS="<fn=1>契</fn>"
 			;;
 	esac
+	MPC_PERCENT=$(mpc status | egrep -o '...%)' | egrep -o '[[:digit:]]+')
 	
 	## This string is a mess, search it up by using commands instead
-	PRINTING_STRING=" <action=\`mpc stop\` button=1> <fn=1></fn> </action><action=\`$XMENU_RUN_LOCATION\` button=13> <fn=1></fn> ""$MPD_CURRENT_PLAYING"" </action><action=\`mpc prev\` button=1> <fn=1>寧</fn> </action><action=\`mpc toggle\` button=1> $PLAYER_STATUS </action><action=\`mpc next\` button=1> <fn=1>嶺</fn> </action>"
+	PRINTING_STRING=" <action=\`mpc stop\` button=1> <fn=1></fn> </action><action=\`$XMENU_RUN_LOCATION\` button=13> <fn=1></fn> ""$MPD_CURRENT_PLAYING"" (""$MPC_PERCENT""<fn=1></fn>) </action><action=\`mpc prev\` button=1> <fn=1>寧</fn> </action><action=\`mpc toggle\` button=1> $PLAYER_STATUS </action><action=\`mpc next\` button=1> <fn=1>嶺</fn> </action>"
 fi
 printf "$PRINTING_STRING"

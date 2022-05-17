@@ -82,12 +82,13 @@ myConfig = def
 	`additionalKeysP` -- Add keybinds
 	[ ("M-S-m"		, promote)
 	, ("M-<Return>"		, spawn $ myTerminal) 
-	, ("M-S-<Return>"	, spawn "dmenu_run -p Run: -h 23")
-	, ("M-S-z"		, spawn "firefox --new-window")
+	, ("M-S-<Return>"	, spawn "rofi -show run")
+	, ("M-S-z"		, spawn "vivaldi-stable --new-window")
 	, ("M-\\"		, spawn $ myHome ++ "/maintenance/xmenu_run -p 0x20:cursor")
 	, ("M-S-s"		, spawn "flameshot gui")
 	, ("M-s"		, spawn $ myHome ++ "/maintenance/screenshot-script/fullscreenshot.sh")
 	, ("M-S-p"		, spawn $ myHome ++ "/.xmonad/bash-stuff/music-helper/xmenu-run.sh -p 850x20:0")
+	, ("M-p"		, spawn $ "rofi -show")
 	, ("M-<XF86AudioNext>"	, spawn "mpc next") -- mpd stuff
 	, ("M-<XF86AudioPrev>"	, spawn "mpc prev")
 	, ("M-<XF86AudioPlay>"	, spawn "mpc toggle")

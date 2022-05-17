@@ -8,6 +8,8 @@ alias shut='shutdown now'
 alias ls='ls --color=auto'
 alias snownews='snownews -u'
 
+alias neofetch='neofetch --disable disk theme icons' 
+
 export TERM='linux-16color'
 
 
@@ -33,6 +35,7 @@ fi
 
 export EDITOR='nvim'
 export SUDO_ASKPASS='/usr/lib/ssh/x11-ssh-askpass'
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 PS1='\[\e[1;36m\]\u\[\e[1;33m\]@\[\e[1;31m\]\h\[\e[m\] [\[\e[1;34m\]\w\[\e[m\]] \$ '
 

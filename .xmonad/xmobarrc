@@ -36,5 +36,5 @@ Config { overrideRedirect  = False
 	]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff><action=`~/maintenance/xmenu_run` button=1> <fn=1></fn> </action>%UnsafeXMonadLog% </box></fc>} %date% {<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff>%mymusicplayer%| %uptime% | %cpu% | %memory% | %dynnetwork% |%battery%<action=`dunstctl history-pop` button=1><action=`dunstctl close-all` button=3> <fn=2></fn> </action></action></box></fc>"
+	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff><action=`~/maintenance/xmenu_run` button=1> <fn=1></fn> </action>%UnsafeXMonadLog% </box></fc>}<fc=#d1feff,#373737:0><box type=HBoth width=1 color=#d1feff> %date% </box></fc>{<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff>%mymusicplayer%| %uptime% | %cpu% | %memory% | %dynnetwork% |%battery%<action=`dunstctl history-pop` button=1><action=`dunstctl close-all` button=3> <fn=2></fn> </action></action></box></fc>"
 }

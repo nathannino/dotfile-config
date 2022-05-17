@@ -2,7 +2,8 @@
 
 ### Still part of the very ugly and stupid and not very portable bash music script collection lol
 
-SONG_TO_PLAY=$(mpc listall | dmenu -l 10 -p 'Add music')
+#SONG_TO_PLAY=$(mpc listall | dmenu -l 10 -p 'Add music')
+SONG_TO_PLAY=$(mpc listall | rofi -dmenu -multi-select -p 'Add music')
 IFS=$'\n'
 
 printf "\n$SONG_TO_PLAY"$'\n'
