@@ -89,6 +89,7 @@ myConfig = def
 	, ("M-s"		, spawn $ myHome ++ "/maintenance/screenshot-script/fullscreenshot.sh")
 	, ("M-S-p"		, spawn $ myHome ++ "/.xmonad/bash-stuff/music-helper/xmenu-run.sh -p 850x20:0")
 	, ("M-p"		, spawn $ "rofi -show")
+	, ("M-l"		, spawn $ "sleep 1.5 && xset dpms force suspend") -- Suspend screens
 	, ("M-<XF86AudioNext>"	, spawn "mpc next") -- mpd stuff
 	, ("M-<XF86AudioPrev>"	, spawn "mpc prev")
 	, ("M-<XF86AudioPlay>"	, spawn "mpc toggle")
