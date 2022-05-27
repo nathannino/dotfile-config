@@ -39,4 +39,4 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 PS1='\[\e[1;36m\]\u\[\e[1;33m\]@\[\e[1;31m\]\h\[\e[m\] [\[\e[1;34m\]\w\[\e[m\]] \$ '
 
-~/bash_unique_profile.sh
+~/bash_welcome_profile.sh
