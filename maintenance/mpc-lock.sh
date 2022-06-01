@@ -8,6 +8,7 @@ function mpc_show () {
 	mpc status
 	printf "\n"
 	date
+	cal
 }
 
 if test -n "$MPC_CURRENT" 
