@@ -1,5 +1,5 @@
-xmonad-git
-xmonad-contrib-git
+xmonad
+xmonad-contrib
 xmobar
 neofetch
 mpd
@@ -20,3 +20,6 @@ picom
 nitrogen
 gnome-keyring
 x11-ssh-askpass
+duf
+theme.sh
+gum-bin

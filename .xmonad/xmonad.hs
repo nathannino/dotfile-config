@@ -94,5 +94,6 @@ myConfig = def
 	, ("M-<XF86AudioPrev>"	, spawn "mpc prev")
 	, ("M-<XF86AudioPlay>"	, spawn "mpc toggle")
 	, ("M-<XF86AudioStop>"	, spawn "mpc clear") -- end of mpd stuff
+  , ("M-/"	, spawn "xmessage -file /home/nathan_nino/README.txt")
 	]
 	

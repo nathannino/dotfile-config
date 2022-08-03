@@ -14,16 +14,8 @@ F_xmonad_recompile () {
 	if xmonad --recompile; then
 		printf "\n  == Updating done without errors ==\n"
 	else
-		cd ~/.cache/yay/xmonad-contrib-git
-		makepkg -if
-		cd
-		if xmonad --recompile; then
-
-			printf "\n  == Updating done, hopefully without errors this time ==\n"
-		else
-			printf "\n[!] An error occured while trying to recompile xmonad\n** Do not run startx until the error has been fixed **\n"
-			exit 100;
-		fi
+		printf "\n[!] An error occured while trying to recompile xmonad\n** Do not run startx until the error has been fixed **\n"
+		exit 100;
 	fi
 
 }
@@ -35,7 +27,14 @@ F_osu_lazer () {
 	cd - > /dev/null
 }
 
+F_postUpdate () {
+	printf "\n  == Updating complete ==\n"
+	read -n 1 -r -s -p " - Press anything to review htop - "
+	htop
+}
+
 F_updateAll
 F_xmonad_recompile
+F_postUpdate
 
 exit 0;

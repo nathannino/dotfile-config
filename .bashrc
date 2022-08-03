@@ -54,7 +54,7 @@ fi
 #    echo -en "\e]PFf2f2f2" #white
 #    clear #for background artifacting
 #fi
-neofetch
+./maintenance/banner.sh
 
 PS1='\[\e[1;36m\]\u\[\e[1;33m\]@\[\e[1;31m\]\h\[\e[m\] [\[\e[1;36m\]\w\[\e[m\]] \$ '
 export EDITOR=nvim
