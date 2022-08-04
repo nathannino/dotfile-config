@@ -17,20 +17,20 @@ Do `MODKEY + SHIFT + RETURN` to open the command-based application launcher (fas
 	| MODKEY + SHIFT + RETURN | Opens run launcher (rofi)
 	|    MODKEY + SHIFT + z   | Opens the Vivaldi web browser
 	|    MODKEY + SHIFT + c   | Closes window with focus
-	|    	   MODKEY + q       | Restarts xmonad
+	|        MODKEY + q       | Restarts xmonad
 	|    MODKEY + SHIFT + q   | Quits xmonad
 	|        MODKEY + b       | Toggles the status bar
 	|      MODKEY + SPACE     | Toggle between layouts (Tall -> Mirror Tall -> Full) <-- Where "Full" will fullscreen the focused application
 	|       MODKEY + 1-9      | Switch focus to workspace (1-9)
 	|   MODKEY + SHIFT + 1-9  | Send focused window to workspace (1-9)
 	|        MODKEY + j       | Switch focus between windows in the stack (Next)
-	|	       MODKEY + k	      | Switch focus between windows in the stack (Previous)
+	|        MODKEY + k       | Switch focus between windows in the stack (Previous)
 	|    MODKEY + SHIFT + j   | Rotates the windows in the stack (Next)
 	|    MODKEY + SHIFT + k   | Rotates the windows in the stack (Previous)
-	|	       MODKEY + h	      | Expand size of window
-	|	       MODKEY + l	      | Shrink size of window
-	|	       MODKEY + .	      | Add window to main side of the screen
-	|	       MODKEY + ,   	  | Remove window from main side of the screen
+	|        MODKEY + h       | Expand size of window
+	|        MODKEY + l       | Shrink size of window
+	|        MODKEY + .       | Add window to main side of the screen
+	|        MODKEY + ,       | Remove window from main side of the screen
 	---------------------------------------------------------------------------------
 	|MODKEY + MOUSE LEFT CLICK| Move floating window + turn tilling window into floating window
 	|MODKEY + MOUSE RIGHT CLICK| Resize floating window + turn tilling window into floating window
