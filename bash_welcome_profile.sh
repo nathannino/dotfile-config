@@ -3,7 +3,7 @@
 # Functions
 
 GUM_TTY="Continue to tty"
-GUM_STARTX="Start graphical environnement"
+GUM_STARTX="Start graphical environnement (GUI)"
 GUM_UPDATE="Update (Requires root password)"
 GUM_HELP="View Help file (Has list of keybindings required to use the graphical environnement)"
 GUM_MPC="Next song"
@@ -14,7 +14,6 @@ F_mpc_start () {
 	mpc clear --quiet
 	mpc add --quiet / 
 	mpc play
-	printf "\n"
 }
 
 F_mpc_stop() {
@@ -60,6 +59,7 @@ then
 
 	while sleep 0
 	do
+		echo "================[ Select an option  ]===================="
 		CHOICE=$(gum choose "$GUM_HELP" "$GUM_STARTX" "$GUM_UPDATE" "$GUM_MPC" "$GUM_TTY")
 		if test "$CHOICE" = "$GUM_TTY"
 		then
@@ -68,7 +68,8 @@ then
 		else
 			if test "$CHOICE" = "$GUM_HELP"
 			then
-				bat "$HELP_FILE"
+				echo "================[ README.txt (for graphical environement) ]===================="
+				cat "$HELP_FILE"
 			else
 				if test "$CHOICE" = "$GUM_UPDATE"
 				then
