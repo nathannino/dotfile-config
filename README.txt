@@ -8,7 +8,7 @@ Do `MODKEY + SHIFT + RETURN` to open the command-based application launcher (fas
 	- io.elementary.files --> File viewer
 
 3) xmonad keybindings : There are more, but these are the important ones
-												MODKEY == ALT Key
+												MODKEY == WIN Key
 				Main Keybindings
 	----------------------------------------------------------------------------------
 	|       Keybindings       | Action 

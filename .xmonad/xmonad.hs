@@ -73,7 +73,7 @@ myHome = "/home/nathan_nino/"
 
 -- Set configuration
 myConfig = def
-	{ modMask	= mod1Mask	-- Change this to mod4 when switching to main pc
+	{ modMask	= mod4Mask	-- Change this to mod4 when switching to main pc
 	, terminal	= myTerminal	-- Set the terminal
 	, manageHook = myManageHook	-- Deal with windows (Make some floating)
 	, focusedBorderColor = "#969e00"
