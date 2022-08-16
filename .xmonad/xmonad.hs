@@ -82,7 +82,7 @@ myConfig = def
 	`additionalKeysP` -- Add keybinds
 	[ ("M-S-m"		, promote)
 	, ("M-<Return>"		, spawn $ myTerminal) 
-	, ("M-S-<Return>"	, spawn "rofi -show run")
+	, ("M-S-<Return>"	, spawn $ myHome ++ "/.config/rofi/launchers/type-1/launcher.sh")
 	, ("M-S-z"		, spawn "vivaldi-stable --new-window")
 	, ("M-\\"		, spawn $ myHome ++ "/maintenance/xmenu_run -p 0x20:cursor")
 	, ("M-S-s"		, spawn "flameshot gui")

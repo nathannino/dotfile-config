@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#TODO : install rofi themes from https://github.com/adi1090x/rofi
+
 echo "Welcome to the post install setup script, to get the important packages installed and have the dotcfg configs all ready to go"
 
 echo "This script will not check for error codes, so please only terminate it using \"^c\""
