@@ -17,7 +17,7 @@ But, if that link is down...
 - xmenu
 - flameshot
 - bash
-- calc			--> Need to symlink calc-d inside /usr/bin/
+- calc
 - nvim
 - snownews
 - mpd
