@@ -13,7 +13,6 @@ But, if that link is down...
 - neofetch
 - htop
 - dunst
-- dmenu
 - xmenu
 - flameshot
 - bash
