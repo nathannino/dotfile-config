@@ -59,3 +59,4 @@ dotcfg push origin main
 - Add rofi configuration WITHOUT just making a copy of [adi1090x/rofi](https://github.com/adi1090x/rofi)
 - Add missing dotfile/program with dotfile
 - Add neovim plugin install script
+- Add script that changes all instances of "nathan_nino" to the current user's username
