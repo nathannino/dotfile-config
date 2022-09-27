@@ -23,6 +23,7 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.WindowSwallowing
 
 -- Main function, just call other stuff
 main :: IO ()
@@ -68,6 +69,9 @@ myManageHook = composeAll
 	, title =? "UNDERTALE"				--> doFloat
 	]
 
+
+-- handleEventHook = swallowEventHook (className =? "Alacritty"  <||> className =? "st-256color" <||> className =? "XTerm") (return True) -- TODO : Figure out how this works plzzzz
+
 myTerminal = "alacritty" --Since we are using the terminal in other places
 myHome = "/home/nathan_nino/"
 
@@ -89,11 +93,12 @@ myConfig = def
 	, ("M-s"		, spawn $ myHome ++ "/maintenance/screenshot-script/fullscreenshot.sh")
 	, ("M-S-p"		, spawn $ myHome ++ "/.xmonad/bash-stuff/music-helper/xmenu-run.sh -p 850x20:0")
 	, ("M-p"		, spawn $ "rofi -show")
-	, ("M-l"		, spawn $ "sleep 1.5 && xset dpms force suspend") -- Suspend screens
+	, ("M-S-l"		, spawn $ "sleep 1.5 && xset dpms force suspend") -- Suspend screens
 	, ("M-<XF86AudioNext>"	, spawn "mpc next") -- mpd stuff
 	, ("M-<XF86AudioPrev>"	, spawn "mpc prev")
 	, ("M-<XF86AudioPlay>"	, spawn "mpc toggle")
 	, ("M-<XF86AudioStop>"	, spawn "mpc clear") -- end of mpd stuff
   , ("M-/"	, spawn "xmessage -file /home/nathan_nino/README.txt")
+  , ("M-S-q"	, spawn $ myHome ++ "/.config/rofi/powermenu/type-1/powermenu.sh")
 	]
 	

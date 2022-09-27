@@ -37,16 +37,6 @@ F_neofetch () {
 	./maintenance/banner.sh
 }
 
-F_updateAll () {
-	printf "== Updating arch packages and AUR packages ==\n  "
-	yay -Syu
-	printf "\n  == Updating flatpak packages ==\n"
-	sudo flatpak update
-	printf "\n  == Updating complete ==\n"
-	read -n 1 -r -s -p "Press anything to review htop"
-	htop
-}
-
 #main
 
 #~/maintenance/schedule-git

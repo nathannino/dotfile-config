@@ -33,6 +33,11 @@ F_postUpdate () {
 	htop
 }
 
+F_preUpdate () {
+	snownews
+}
+
+F_preUpdate
 F_updateAll
 F_xmonad_recompile
 F_postUpdate

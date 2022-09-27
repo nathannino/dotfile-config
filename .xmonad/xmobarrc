@@ -32,9 +32,10 @@ Config { overrideRedirect  = False
 			, Run DynNetwork [ "-S", "True", "--template", "<fn=1>直</fn>: <fn=1></fn> <rx>  <tx> <fn=1></fn>" ] 30
 		  --, Run CommandReader "/home/nathan_nino/.xmonad/bash-stuff/music_player_status.sh" musicplayer
 		  , Run Com "/home/nathan_nino/.xmonad/bash-stuff/music_player_status.sh" [""] "mymusicplayer" 1
+			, Run Com "xkblayout" [""] "mykeyboardlayout" 5
 		  , Run UnsafeXMonadLog
 	]
 	, sepChar	= "%"
 	, alignSep	= "}{"
-	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff><action=`~/maintenance/xmenu_run` button=1> <fn=1></fn> </action>%UnsafeXMonadLog% </box></fc>}<fc=#d1feff,#373737:0><box type=HBoth width=1 color=#d1feff> %date% </box></fc>{<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff>%mymusicplayer%| %uptime% | %cpu% | %memory% | %dynnetwork% |%battery%<action=`dunstctl history-pop` button=1><action=`dunstctl close-all` button=3> <fn=2></fn> </action></action>|<action='/home/nathan_nino/.config/rofi/powermenu/type-1/powermenu.sh'> <fn=1></fn> </action></box></fc>"
+	, template = "<fc=#d1feff,#424242:0><box type=Right width=1 color=#d1feff><action=`~/maintenance/xmenu_run` button=1> <fn=1></fn> </action>%UnsafeXMonadLog% </box></fc>}<fc=#d1feff,#373737:0><box type=HBoth width=1 color=#d1feff> %date% </box></fc>{<fc=#d1feff,#303030:0><box type=Left width=1 color=#d1feff>%mymusicplayer%| %uptime% | %cpu% | %memory% | %dynnetwork% |%battery% %mykeyboardlayout% | <action=`dunstctl history-pop` button=1><action=`dunstctl close-all` button=3> <fn=2></fn> </action></action>|<action='/home/nathan_nino/.config/rofi/powermenu/type-1/powermenu.sh'> <fn=1></fn> </action></box></fc>"
 }
