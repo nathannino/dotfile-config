@@ -6,23 +6,23 @@ Source : https://dev.to/nimai/yet-another-guide-on-backing-up-dotfiles-3be6
 But, if that link is down...
 
 ## Programs in this thing 
-- xmonad 		--> Currently `xmonad-git^aur`
-- xmonad-contrib	--> Currently `xmonad-contrib-git^aur`
+- xmonad
+- xmonad-contrib
 - xmobar
 - openjdk		--> At least version 16
 - neofetch
 - htop
 - dunst
-- dmenu
 - xmenu
 - flameshot
 - bash
-- calc			--> Need to symlink calc-d inside /usr/bin/
+- calc
 - nvim
 - snownews
 - mpd
 - ymuse
 - mpc
+- rofi      --> application menu
 
 ## Preparing system
 **This repo will have conflicts with any setup**
@@ -54,3 +54,9 @@ dotcfg add <dotfile>
 dotcfg commit -m <commit message>
 dotcfg push origin main
 ```
+
+# TODO :
+- Add rofi configuration WITHOUT just making a copy of [adi1090x/rofi](https://github.com/adi1090x/rofi)
+- Add missing dotfile/program with dotfile
+- Add neovim plugin install script
+- Add script that changes all instances of "nathan_nino" to the current user's username
