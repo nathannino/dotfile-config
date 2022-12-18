@@ -1,3 +1,5 @@
+## Repo has been moved to https://gitlab.com/nathannino/dotfiles in the hopes that by doing it from scratch in a vm, I will actually get to finish it
+
 # How to use this repo
 ###### Yeah, because I **will** forget about it later... =/
 
